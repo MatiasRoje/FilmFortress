@@ -1,0 +1,7 @@
+@import "general.css";
+
+/* Import CSS files for components */
+@import "components/button.css";
+@import "components/nav.css";
+
+/* Import CSS files for pages */
