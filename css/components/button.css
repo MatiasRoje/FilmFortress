@@ -1,18 +1,18 @@
-.btn-login {
+.btn-main-nav {
   text-decoration: none;
   display: inline-block;
   color: #222;
-  padding: 12px;
+  padding: 1.2rem;
   border-radius: 3px;
   transition: all 0.2s;
 }
 
-.btn-login:hover {
+.btn-main-nav:hover {
   background-color: #115e59;
   color: #fff;
 }
 
-.btn-login:active {
+.btn-main-nav:active {
   background-color: #0f5550;
   color: #fff;
 }

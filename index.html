@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Cinema project</title>
+    <title>FilmFortress — 10.000 movies database</title>
   </head>
   <body>
     <header class="header">
@@ -16,12 +23,33 @@
           alt="FilmFortress logo"
         />
       </a>
+      <form action="/search" method="GET" class="search-form">
+        <input
+          type="text"
+          id="searchInput"
+          name="query"
+          placeholder="Search movies..."
+        />
+        <button type="submit" class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
       <nav class="main-nav">
-        <div class="nav-user-login">
-          <div>
-            <a href="#" class="main-nav-link btn-login">Login</a>
-          </div>
-        </div>
+        <li class="main-nav-list">
+          <ul>
+            <a href="#" class="main-nav-link btn-main-nav">Movies</a>
+          </ul>
+          <ul>
+            <a href="#" class="main-nav-link btn-main-nav">TV Shows</a>
+          </ul>
+          <ul class="main-nav-division"></ul>
+          <ul>
+            <a href="#" class="main-nav-link btn-main-nav">Watchlist</a>
+          </ul>
+          <ul>
+            <a href="#" class="main-nav-link btn-main-nav">Login</a>
+          </ul>
+        </li>
       </nav>
     </header>
     <div class="container">

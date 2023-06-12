@@ -3,10 +3,24 @@
   justify-content: space-between;
   align-items: center;
   background-color: #cfdfde;
-  height: 64px;
-  padding: 0 48px;
+  height: 6.4rem;
+  padding: 0 4.8rem;
+  font-size: 1.6rem;
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
 }
 
 .logo {
   height: 58px;
+}
+
+.main-nav-division {
+  border: 1px solid #4e4e4e;
+  height: 2rem;
+  margin: 0px 0.5rem;
 }
