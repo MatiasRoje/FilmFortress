@@ -40,6 +40,11 @@ Bold: 700
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: solid;
+  outline-color: #fff;
+}
+
 html {
   /* font-size: 10px; */
 

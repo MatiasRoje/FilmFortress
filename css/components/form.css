@@ -3,12 +3,21 @@
   align-items: center;
 }
 
-#searchInput {
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  border: 1px solid #aaa;
+  border-radius: 8px;
   width: 300px;
+}
+
+#search-input::placeholder {
+  color: #aaa;
 }
 
 .search-button {
@@ -16,8 +25,10 @@
   border: none;
   cursor: pointer;
   padding: 8px;
+  margin-left: -3.2rem; /* Adjust the value as needed */
 }
 
 .search-button i {
   font-size: 20px;
+  color: #a9a9a9;
 }

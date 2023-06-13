@@ -24,15 +24,17 @@
         />
       </a>
       <form action="/search" method="GET" class="search-form">
-        <input
-          type="text"
-          id="searchInput"
-          name="query"
-          placeholder="Search movies..."
-        />
-        <button type="submit" class="search-button">
-          <i class="fas fa-search"></i>
-        </button>
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="search-input"
+            name="query"
+            placeholder="Search for a movie, tv show..."
+          />
+          <button type="submit" class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
       </form>
       <nav class="main-nav">
         <li class="main-nav-list">
