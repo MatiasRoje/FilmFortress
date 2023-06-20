@@ -3,4 +3,6 @@
 /* Import CSS files for components */
 @import "components/button.css";
 @import "components/nav.css";
-@import "components/form.css"; /* Import CSS files for pages */
+@import "components/form.css";
+
+/* Import CSS files for pages */
