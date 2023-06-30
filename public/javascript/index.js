@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 function getTopRatedMovies() {
   const apiKey = process.env.TMDB_API_KEY; // Get the API key from environment variables
   const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`;
