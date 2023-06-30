@@ -11,8 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <script src="javascript/index.js" defer></script>
+    <link rel="stylesheet" href="css/index.css" />
     <title>FilmFortress — +10.000 movies database</title>
   </head>
   <body>
@@ -20,7 +19,7 @@
       <a href="#">
         <img
           class="logo"
-          src="./img/Logo without text.png"
+          src="../img/Logo without text.png"
           alt="FilmFortress logo"
         />
       </a>
@@ -64,5 +63,31 @@
         <ul id="movies"></ul>
       </section>
     </div>
+    <script>
+      function getTopRatedMovies() {
+        const apiKey = "a8706f05d2b08b4702eb0227a3bee444"; // Get the API key from environment variables
+        const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`;
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => displayMovies(data.results.slice(0, 10)))
+          .catch((error) => console.error("Error:", error));
+      }
+
+      function displayMovies(movies) {
+        const movieList = document.getElementById("movies");
+        console.log(movies);
+        movies.forEach((movie) => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+      <h2>${movie.title}</h2>
+      <p>${movie.overview}</p>
+    `;
+          movieList.appendChild(li);
+        });
+      }
+
+      getTopRatedMovies();
+    </script>
   </body>
 </html>

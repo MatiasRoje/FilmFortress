@@ -12,5 +12,6 @@ if (process.env.NODE_ENV === "development") {
 
 // PART ROUTES
 app.use("/api/movies", moviesRouter);
+app.use(express.static("public"));
 
 module.exports = app;
