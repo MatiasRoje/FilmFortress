@@ -1,10 +1,16 @@
 const express = require("express");
+const morgan = require("morgan");
+
+const moviesRouter = require("./routes/movies");
+
 const app = express();
-require("dotenv").config();
-require("./config/database");
 
-// Serve static files from the 'public' directory
-app.use(express.static("public"));
+// PART MIDDLEWARE
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// PART ROUTES
+app.use("/api/movies", moviesRouter);
+
+module.exports = app;
