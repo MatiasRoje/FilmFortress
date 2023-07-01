@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
-dotenv.config({ path: "./config.env" });
+dotenv.config({ path: "./.env" });
 const app = require("./app");
 
 const connectDB = async () => {
@@ -18,5 +18,5 @@ const connectDB = async () => {
 
 connectDB();
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server running on port ${port}`));

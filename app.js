@@ -10,8 +10,9 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
+app.use(express.static(`${__dirname}/public`));
+
 // PART ROUTES
 app.use("/api/movies", moviesRouter);
-app.use(express.static("public"));
 
 module.exports = app;
